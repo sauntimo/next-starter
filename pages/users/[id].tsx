@@ -1,16 +1,17 @@
+import React, { ReactElement } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 
 import { User } from '../../interfaces';
-import { sampleUserData } from '../../utils/sample-data';
+import sampleUserData from '../../utils/sample-data';
 import Layout from '../../components/layout/Layout';
 import ListDetail from '../../components/list/ListDetail';
 
 type Props = {
-  item?: User
-  errors?: string
+  item?: User,
+  errors?: string,
 }
 
-const StaticPropsDetail = ({ item, errors }: Props) => {
+const StaticPropsDetail: React.FC<Props> = ({ item, errors }: Props): ReactElement => {
   if (errors) {
     return (
       <Layout title="Error | Next.js + TypeScript Example">
@@ -34,6 +35,11 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
   );
 };
 
+StaticPropsDetail.defaultProps = {
+  item: undefined,
+  errors: undefined,
+};
+
 export default StaticPropsDetail;
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -50,6 +56,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // This function gets called at build time on server-side.
 // It won't be called on client-side, so you can even do
 // direct database queries.
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const id = params?.id;

@@ -1,7 +1,8 @@
+import React, { ReactElement } from 'react';
 import Link from 'next/link';
 import Layout from '../components/layout/Layout';
 
-const AboutPage = () => (
+const AboutPage: React.FC = (): ReactElement => (
   <Layout title="About">
     <div className="container col-start-2 col-end-12">
       <h1>About</h1>

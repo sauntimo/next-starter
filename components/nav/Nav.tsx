@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Link from 'next/link';
 import cn from 'classnames';
 
@@ -30,7 +30,7 @@ const nav: NavItem[] = [
   },
 ];
 
-const Nav = () => (
+const Nav: React.FC = (): ReactElement => (
   <nav className={cn(styles.nav, 'space-x-0')}>
     {nav.map((item) => {
       if (item?.external) {
@@ -43,7 +43,7 @@ const Nav = () => (
           <a>{item.title}</a>
         </Link>
       );
-    }).map((item, index) => <div key={index} className="linkContainer p-2 block md:inline-block">{item}</div>)}
+    }).map((item, index) => <div key={index.toString()} className="linkContainer p-2 block md:inline-block">{item}</div>)}
   </nav>
 );
 
