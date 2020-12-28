@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Layout from '../components/layout/Layout'
+import Link from 'next/link';
+import Layout from '../components/layout/Layout';
 
 const IndexPage = () => (
   <Layout title="Home">
@@ -12,6 +12,6 @@ const IndexPage = () => (
       </p>
     </div>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",

@@ -1,10 +1,10 @@
-import React, { ReactNode } from 'react'
-import cn from 'classnames'
-import Head from 'next/head'
+import React, { ReactNode } from 'react';
+import cn from 'classnames';
+import Head from 'next/head';
 
-import Nav from '../nav/Nav'
+import Nav from '../nav/Nav';
 
-import styles from './layout.module.css'
+import styles from './layout.module.css';
 
 type Props = {
   children?: ReactNode
@@ -19,9 +19,9 @@ const Layout = ({ children, title = 'sauntimo.org' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header className="w-screen">
-      <Nav></Nav>
+      <Nav />
     </header>
-    <div className={cn(styles.container, `w-screen grid grid-cols-12`)}>
+    <div className={cn(styles.container, 'w-screen grid grid-cols-12')}>
       {children}
     </div>
     {/* <footer>
@@ -29,6 +29,6 @@ const Layout = ({ children, title = 'sauntimo.org' }: Props) => (
       <span>I'm here to stay (Footer)</span>
     </footer> */}
   </div>
-)
+);
 
-export default Layout
+export default Layout;

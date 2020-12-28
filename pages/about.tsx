@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Layout from '../components/layout/Layout'
+import Link from 'next/link';
+import Layout from '../components/layout/Layout';
 
 const AboutPage = () => (
   <Layout title="About">
@@ -13,6 +13,6 @@ const AboutPage = () => (
       </p>
     </div>
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;
