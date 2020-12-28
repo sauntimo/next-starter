@@ -1,16 +1,22 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { User } from '../../interfaces'
+import { User } from '../../interfaces';
 
-type ListDetailProps = {
+type Props = {
   item: User
 }
 
-const ListDetail = ({ item: user }: ListDetailProps) => (
+const ListDetail: React.FC<Props> = ({ item: user }: Props): React.ReactElement => (
   <div>
-    <h1>Detail for {user.name}</h1>
-    <p>ID: {user.id}</p>
+    <h1>
+      Detail for
+      {user.name}
+    </h1>
+    <p>
+      ID:
+      {user.id}
+    </p>
   </div>
-)
+);
 
-export default ListDetail
+export default ListDetail;

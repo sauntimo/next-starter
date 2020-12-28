@@ -1,17 +1,17 @@
-import React, { ReactNode } from 'react'
-import cn from 'classnames'
-import Head from 'next/head'
+import React, { ReactElement, ReactNode } from 'react';
+import cn from 'classnames';
+import Head from 'next/head';
 
-import Nav from '../nav/Nav'
+import Nav from '../nav/Nav';
 
-import styles from './layout.module.css'
+import styles from './layout.module.css';
 
 type Props = {
-  children?: ReactNode
-  title?: string
+  children?: ReactNode,
+  title?: string,
 }
 
-const Layout = ({ children, title = 'sauntimo.org' }: Props) => (
+const Layout: React.FC<Props> = ({ children, title = 'sauntimo.org' }: Props): ReactElement => (
   <div>
     <Head>
       <title>{`${title} | sauntimo.org`}</title>
@@ -19,16 +19,17 @@ const Layout = ({ children, title = 'sauntimo.org' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header className="w-screen">
-      <Nav></Nav>
+      <Nav />
     </header>
-    <div className={cn(styles.container, `w-screen grid grid-cols-12`)}>
+    <div className={cn(styles.container, 'w-screen grid grid-cols-12')}>
       {children}
     </div>
-    {/* <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer> */}
   </div>
-)
+);
 
-export default Layout
+Layout.defaultProps = {
+  children: null,
+  title: 'sauntimo.org',
+};
+
+export default Layout;

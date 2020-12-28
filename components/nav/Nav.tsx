@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
-import cn from 'classnames'
+import React, { ReactElement } from 'react';
+import Link from 'next/link';
+import cn from 'classnames';
 
-import styles from './nav.module.css'
+import styles from './nav.module.css';
 
 interface NavItem {
   title: string,
@@ -26,27 +26,25 @@ const nav: NavItem[] = [
   {
     title: 'Users API',
     address: '/api/users',
-    external: true
+    external: true,
   },
-]
+];
 
-
-const Nav = () => (
+const Nav: React.FC = (): ReactElement => (
   <nav className={cn(styles.nav, 'space-x-0')}>
-    {nav.map(item => {
-        if (item?.external){
-          return (
-            <a href={item.address}>{item.title}</a>
-          );
-        }
+    {nav.map((item) => {
+      if (item?.external) {
         return (
-          <Link href={item.address}>
-            <a>{item.title}</a>
-          </Link>
-        )
-      }).map((item, index) => <div key={index} className="linkContainer p-2 block md:inline-block">{item}</div>)
-    }
+          <a href={item.address}>{item.title}</a>
+        );
+      }
+      return (
+        <Link href={item.address}>
+          <a>{item.title}</a>
+        </Link>
+      );
+    }).map((item, index) => <div key={index.toString()} className="linkContainer p-2 block md:inline-block">{item}</div>)}
   </nav>
-)
+);
 
-export default Nav
+export default Nav;

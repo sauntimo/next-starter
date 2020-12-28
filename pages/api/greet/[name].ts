@@ -1,9 +1,7 @@
-
-
-import { StatusCodes } from 'http-status-codes'
-import { NextApiRequest, NextApiResponse } from 'next'
-import { failReturn } from '../../../helpers/utilityFunctions'
-import { IApiResponse } from '../../../interfaces/api'
+import { StatusCodes } from 'http-status-codes';
+import { NextApiRequest, NextApiResponse } from 'next';
+import failReturn from '../../../helpers/utilityFunctions';
+import { IApiResponse } from '../../../interfaces/api';
 
 const handler = (_req: NextApiRequest, res: NextApiResponse<IApiResponse<string>>): void => {
   const {
@@ -12,19 +10,19 @@ const handler = (_req: NextApiRequest, res: NextApiResponse<IApiResponse<string>
 
   try {
     if (typeof name !== 'string') {
-      throw new Error('Please specify a name as text')
+      throw new Error('Please specify a name as text');
     }
 
     const response = {
       success: true,
       message: `Successfully generated greeting for ${name}`,
-      data: `Hello, ${name}.`
-    }
+      data: `Hello, ${name}.`,
+    };
 
-    res.status(StatusCodes.OK).json(response)
+    res.status(StatusCodes.OK).json(response);
   } catch (err) {
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(failReturn(`Something went wrong! crying_cat_face.`))
+    res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(failReturn('Something went wrong! crying_cat_face.'));
   }
-}
+};
 
-export default handler
+export default handler;
