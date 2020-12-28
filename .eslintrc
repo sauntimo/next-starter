@@ -10,6 +10,13 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "rules": {
     "import/extensions": ["error", "never"]
   }

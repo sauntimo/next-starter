@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { failReturn } from '../../../helpers/utilityFunctions';
+import failReturn from '../../../helpers/utilityFunctions';
 import { IApiResponse } from '../../../interfaces/api';
 
 const handler = (_req: NextApiRequest, res: NextApiResponse<IApiResponse<string>>): void => {
