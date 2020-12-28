@@ -1,4 +1,4 @@
-![Node.js CI](https://github.com/sauntimo/next-starter/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://github.com/sauntimo/next-starter/workflows/Node.js%20CI/badge.svg) ![Vercel](https://vercelbadge.vercel.app/api/sauntimo/next-starter)
 
 # TypeScript Next.js Starter App
 
