@@ -16,6 +16,14 @@ body {
   @apply px-4 py-2 font-bold text-white bg-blue-500 rounded;
 }
 
+h1 {
+  @apply text-xl md:text-5xl font-semibold mt-4 mb-4
+}
+
+code {
+  @apply bg-gray-300 p-1
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */

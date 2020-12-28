@@ -28,6 +28,10 @@ const nav: NavItem[] = [
     address: '/api/users',
     external: true,
   },
+  {
+    title: 'Greet API',
+    address: '/greet',
+  },
 ];
 
 const Nav: React.FC = (): ReactElement => (
