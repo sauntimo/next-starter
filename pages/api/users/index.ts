@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import StatusCodes from 'http-status-codes';
-import { failReturn } from '../../../helpers/utilityFunctions';
+import failReturn from '../../../helpers/utilityFunctions';
 import { User } from '../../../interfaces';
 import { IApiResponse } from '../../../interfaces/api';
-import { sampleUserData } from '../../../utils/sample-data';
+import sampleUserData from '../../../utils/sample-data';
 
 const handler = (_req: NextApiRequest, res: NextApiResponse<IApiResponse<User[]>>): void => {
   try {
