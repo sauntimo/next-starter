@@ -21,7 +21,7 @@ const Layout: React.FC<Props> = ({ children, title = 'sauntimo.org' }: Props): R
     <header className="w-screen">
       <Nav />
     </header>
-    <div className={cn(styles.container, 'w-screen grid grid-cols-12')}>
+    <div className={cn(styles.container, 'w-screen grid grid-cols-12 gap-4')}>
       {children}
     </div>
   </div>
