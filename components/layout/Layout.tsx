@@ -19,9 +19,7 @@ const Layout: React.FC<Props> = ({ children, title: pageTitle = 'sauntimo.org' }
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Head>
-    <header className="w-screen">
-      <ButtonAppBar pageTitle={pageTitle} />
-    </header>
+    <ButtonAppBar pageTitle={pageTitle} />
     <div className={cn(styles.container, 'w-screen grid grid-cols-12 gap-4')}>
       {children}
     </div>
