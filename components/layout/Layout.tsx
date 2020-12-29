@@ -2,7 +2,7 @@ import React, { ReactElement, ReactNode } from 'react';
 import cn from 'classnames';
 import Head from 'next/head';
 
-import Nav from '../nav/Nav';
+import ButtonAppBar from '../nav/ButtonAppBar';
 
 import styles from './layout.module.css';
 
@@ -11,15 +11,16 @@ type Props = {
   title?: string,
 }
 
-const Layout: React.FC<Props> = ({ children, title = 'sauntimo.org' }: Props): ReactElement => (
+const Layout: React.FC<Props> = ({ children, title: pageTitle = 'sauntimo.org' }: Props): ReactElement => (
   <div>
     <Head>
-      <title>{`${title} | sauntimo.org`}</title>
+      <title>{`${pageTitle} | sauntimo.org`}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Head>
     <header className="w-screen">
-      <Nav />
+      <ButtonAppBar pageTitle={pageTitle} />
     </header>
     <div className={cn(styles.container, 'w-screen grid grid-cols-12 gap-4')}>
       {children}
