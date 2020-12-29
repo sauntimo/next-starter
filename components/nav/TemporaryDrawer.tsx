@@ -68,16 +68,16 @@ const TemporaryDrawer: React.FC<props> = ({ open, toggleDrawer }: props): ReactE
       <List>
         {nav.map((navItem) => (
           <>
-            <ListItem button key={navItem.title}>
-              <ListItemIcon>
-                <Icon>{navItem.icon}</Icon>
-              </ListItemIcon>
-              <ListItemText>
-                <Link href={navItem.path}>
-                  <a>{navItem.title}</a>
-                </Link>
-              </ListItemText>
-            </ListItem>
+            <Link href={navItem.path}>
+              <a>
+                <ListItem button key={navItem.title}>
+                  <ListItemIcon>
+                    <Icon>{navItem.icon}</Icon>
+                  </ListItemIcon>
+                  <ListItemText>{navItem.title}</ListItemText>
+                </ListItem>
+              </a>
+            </Link>
             {navItem.dividerAfter && <Divider />}
           </>
         ))}
