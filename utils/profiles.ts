@@ -20,7 +20,7 @@ const profileData: Profile[] = [
   {
     name: 'Xbox',
     description: 'Mostly playing Borderlands (requires login)',
-    url: 'https://instagram.com/sauntimo',
+    url: 'https://account.xbox.com/en-gb/profile?gamertag=sauntimo',
   },
   {
     name: 'Steam',
