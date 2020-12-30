@@ -12,11 +12,6 @@ const AboutPage: React.FC = (): ReactElement => (
       subtitle="web developer based in Bristol, UK"
       body="I like running, playing bass, photography, code and video games"
     >
-      <Link href="https://github.com/sauntimo/next-starter">
-        <a>
-          <Button size="small">View Code</Button>
-        </a>
-      </Link>
       <Link href="/">
         <a>
           <Button size="small">Home</Button>

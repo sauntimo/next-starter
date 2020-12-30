@@ -9,7 +9,6 @@ interface Props {
   title: string,
   subtitle: string,
   body: string,
-  children: ReactElement[],
 }
 
 const useStyles = makeStyles(() => createStyles({
@@ -27,9 +26,9 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-const TitleCard: React.FC<Props> = ({
+const TitleCard: React.FC<React.PropsWithChildren<Props>> = ({
   title, subtitle, body, children,
-}: Props): ReactElement => {
+}: React.PropsWithChildren<Props>): ReactElement => {
   const classes = useStyles();
 
   return (
@@ -45,7 +44,7 @@ const TitleCard: React.FC<Props> = ({
           {body}
         </Typography>
       </CardContent>
-      {children.length && (
+      {children !== undefined && (
         <CardActions>
           {children}
         </CardActions>
