@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 interface Props {
   title: string,
+  titleComponent?: 'h1' | 'h2' | 'h3' | 'h4',
   subtitle: string,
   body: string,
 }
@@ -27,14 +28,14 @@ const useStyles = makeStyles(() => createStyles({
 }));
 
 const TitleCard: React.FC<React.PropsWithChildren<Props>> = ({
-  title, subtitle, body, children,
+  title, titleComponent, subtitle, body, children,
 }: React.PropsWithChildren<Props>): ReactElement => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography className={classes.title} variant="h1" component="h1">
+        <Typography className={classes.title} variant={titleComponent} component="h2">
           {title}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
@@ -51,6 +52,10 @@ const TitleCard: React.FC<React.PropsWithChildren<Props>> = ({
       )}
     </Card>
   );
+};
+
+TitleCard.defaultProps = {
+  titleComponent: 'h1',
 };
 
 export default TitleCard;
