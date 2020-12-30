@@ -3,6 +3,11 @@ import { Profile } from '../interfaces';
 /** profiles data */
 const profileData: Profile[] = [
   {
+    name: 'Github',
+    description: "I'm into Typescript",
+    url: 'https://github.com/sauntimo',
+  },
+  {
     name: 'Twitter',
     description: "I don't tweet much, and it's mostly complaining",
     url: 'https://twitter.com/sauntimo',
@@ -11,11 +16,6 @@ const profileData: Profile[] = [
     name: 'Instagram',
     description: 'I take identical pictures of reflected sunsets',
     url: 'https://instagram.com/sauntimo',
-  },
-  {
-    name: 'Github',
-    description: "I'm into Typescript",
-    url: 'https://github.com/sauntimo',
   },
   {
     name: 'Last.FM',
