@@ -8,3 +8,10 @@ export type User = {
   id: number
   name: string
 }
+
+export interface Profile {
+  name: string,
+  description: string,
+  url: string,
+  icon?: string,
+}
