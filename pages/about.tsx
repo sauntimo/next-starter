@@ -6,7 +6,7 @@ import Layout from '../components/layout/Layout';
 import TitleCard from '../components/cards/TitleCard';
 
 const AboutPage: React.FC = (): ReactElement => (
-  <Layout title="Home">
+  <Layout title="About">
     <TitleCard
       title="Hey, I&apos;m Tim"
       subtitle="web developer based in Bristol, UK"
