@@ -1,11 +1,8 @@
 import React, { ReactElement, ReactNode } from 'react';
-import cn from 'classnames';
 import Head from 'next/head';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ButtonAppBar from '../nav/ButtonAppBar';
-
-import styles from './layout.module.css';
 
 type Props = {
   children?: ReactNode,
@@ -23,7 +20,7 @@ const Layout: React.FC<Props> = ({ children, title: pageTitle = 'sauntimo.org' }
     <body>
       <CssBaseline />
       <ButtonAppBar pageTitle={pageTitle} />
-      <div className={cn(styles.container, 'w-screen grid grid-cols-12 gap-4')}>
+      <div className="container">
         {children}
       </div>
     </body>

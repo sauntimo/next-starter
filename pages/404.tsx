@@ -4,7 +4,7 @@ import Layout from '../components/layout/Layout';
 
 const AboutPage: React.FC = (): ReactElement => (
   <Layout title="Page Not Found">
-    <div className="container col-start-2 col-end-12">
+    <div>
       <h1>404 - Page Not Found</h1>
       <p>Looks like you&apos;re looking for something that isn&apos;t here.</p>
       <p>
