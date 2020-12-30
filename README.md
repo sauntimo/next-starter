@@ -11,5 +11,4 @@ A simple project that demonstrates using Next.js with TypeScript.
   <img width="55" max-width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/nextjs.svg"/>
   <img width="55" max-width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/eslint.svg"/>
   <img width="55" max-width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/material-ui.svg"/>
-  <img width="55" max-width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/tailwindcss-icon.svg"/>
 </div>
