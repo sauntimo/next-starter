@@ -7,11 +7,11 @@ import Layout from '../../components/layout/Layout';
 
 const Greet: React.FC = (): ReactElement => {
   const [name, setName] = useState('Tim');
-  const [greeting, setGreeting] = useState('');
+  const [greeting, setGreeting] = useState(undefined);
 
-  const submit = async () => {
+  const callApi = async () => {
     const response = await axios.get(`/api/greet/${name}`);
-    setGreeting(JSON.stringify(response.data, null, 2));
+    setGreeting(response.data);
   };
 
   return (
@@ -30,16 +30,16 @@ const Greet: React.FC = (): ReactElement => {
           <Button
             variant="contained"
             color="primary"
-            onClick={submit}
+            onClick={callApi}
           >
-            Submit
+            Call API
           </Button>
         </form>
       </div>
-      {greeting?.length > 0 && (
+      {greeting !== undefined && (
         <div className="container col-start-2 col-end-12">
-          <code className="block">
-            <pre>{greeting}</pre>
+          <code className="block overflow-auto">
+            <pre>{JSON.stringify(greeting, null, 2)}</pre>
           </code>
         </div>
       )}

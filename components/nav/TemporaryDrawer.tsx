@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -67,19 +67,16 @@ const TemporaryDrawer: React.FC<props> = ({ open, toggleDrawer }: props): ReactE
     >
       <List>
         {nav.map((navItem) => (
-          <>
-            <Link key={navItem.title} href={navItem.path}>
-              <a>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon>{navItem.icon}</Icon>
-                  </ListItemIcon>
-                  <ListItemText>{navItem.title}</ListItemText>
-                </ListItem>
-              </a>
-            </Link>
-            {navItem.dividerAfter && <Divider key={`${navItem.title}-divider`} />}
-          </>
+          <Link key={navItem.title} href={navItem.path}>
+            <a>
+              <ListItem button>
+                <ListItemIcon>
+                  <Icon>{navItem.icon}</Icon>
+                </ListItemIcon>
+                <ListItemText>{navItem.title}</ListItemText>
+              </ListItem>
+            </a>
+          </Link>
         ))}
       </List>
     </div>
